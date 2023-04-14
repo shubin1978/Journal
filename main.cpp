@@ -29,9 +29,17 @@ int main() {
     ShowAll(journal);
     cout << "--------" << endl;
 
-    auto name = FindByName(journal,"Sidorov");
-    for(auto item : name){
+    auto name1 = FindByName(journal,"Sidorov");
+    for(auto item : name1){
         cout << item.first << " : " << item.second << endl;
     }
+    cout << "--------" << endl;
+
+    auto name2 = FindByName(journal,"Smirnoff");
+    for(auto item : name2){
+        cout << item.first << " : " << item.second << endl;
+    }
+    cout << "--------" << endl;
+
     return 0;
 }

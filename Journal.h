@@ -31,9 +31,18 @@ void Delete(map<string, string>& journal, string name){
 map<string,string> FindByName(map<string,string>& journal, string name){
     map<string,string> result;
     for (auto item:journal){
-        if (item.first == name){
+    //    if (item.first == name){
+    //          result.insert(item);
+    //    }
+
+        auto it = journal.find(name);
+        if (it == journal.end()){
+            result.insert(pair<string ,string> ("no student", name));
+
+        } else if (item.first == name){
             result.insert(item);
         }
+
     }
     return result;
 }
