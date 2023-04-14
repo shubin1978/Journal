@@ -4,6 +4,6 @@
 
 using namespace std;
 
-void ShowAll(map<string, string> journal){
+void ShowAll(map<string, string>& journal){
     //TODO
 }
