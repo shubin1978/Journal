@@ -10,9 +10,9 @@ map <string,string> ImportFromFile(string path){
     map <string,string> result;
     ifstream file;
     file.open(path);
-    if (!file.is_open()) {
-        std::cerr << "Error: Failed to open file !" << endl;
-    }
+ //   if (!file.is_open()) {
+  //      std::cerr << "Error: Failed to open file !" << endl;
+//    }
     string  line;
     while (getline(file,line)){
         int position = line.find('|');
@@ -24,6 +24,7 @@ map <string,string> ImportFromFile(string path){
     file.close();
     return result;
 }
+
 void ExportToFile(string  path, map<string, string>& journal){
     ofstream file;
     file.open(path);

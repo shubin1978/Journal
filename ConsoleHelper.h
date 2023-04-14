@@ -5,5 +5,7 @@
 using namespace std;
 
 void ShowAll(map<string, string>& journal){
-    //TODO
+    for(auto item : journal){
+        cout << item.first << " : " << item.second << endl;
+    }
 }
